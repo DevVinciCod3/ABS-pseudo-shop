@@ -6,7 +6,7 @@
 - Student 3: Harold Bryan Santos
 
 ## 1. How did you divide the work between you and your partner?
-_(Who worked on which features? How was the work assigned or negotiated?)_
+We use a web appllication called spin the wheel in order to know which member do the features. The features was distributed in to 1 person 1 feature format then for the last feature we make a collaboration for it and then do the task as a team.
 
 ## 2. What Git strategies or commands helped you most during the project?
 _(E.g., branching, rebasing, frequent commits, etc.)_
@@ -25,8 +25,7 @@ _(Any insights or habits you’d apply in future projects?)_
 Working with Git in a team setting taught us the importance of collaboration, communication, and proper workflow management. We learned how critical it is to coordinate tasks, use branches effectively, and follow a consistent commit and merge process to avoid conflicts. It also showed us how Git helps track changes, separate features, and combine work efficiently  but only if the team stays organized and communicates clearly.
 
 ## 6. How would you improve your workflow next time?
-_(Think about technical habits and teamwork practices.)_
+By researching more about the background of the project and then create a seemless plan ahead of time, having a plan makes the workflow more smoothly because we have guide to follow.
 
 ## 7. Optional: Any feedback on the activity?
-_(What worked well? What was confusing or could be improved?)_
 
