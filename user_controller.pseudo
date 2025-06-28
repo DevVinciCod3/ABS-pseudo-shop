@@ -1,22 +1,30 @@
+# This system manages user signup and login.
+# It checks if emails are valid, passwords are strong,
+# and makes sure users are stored correctly.
+
+
 Start with an empty list called user_database
-This list will hold all user information (name, email, password)
+This list will hold all the users' information:
+- name
+- email
+- password
 
 
 Define function named is_valid_email that checks if an email is correctly formatted:
-    
+
     If the email does NOT contain "@" OR does NOT contain ".":
         Show message: "Error: Invalid email format. Email must contain '@' and '.'"
-        Return false  
+        Return false  # Invalid email format
 
     Else:
-        Return true  
+        Return true  # Email is valid
 
 
 Define function named is_strong_password that checks if the password is strong:
 
-    If the length of the password is less than 6 characters:
+    If the password has fewer than 6 characters:
         Show message: "Error: Password must be at least 6 characters long."
-        Return false  # Password is too short
+        Return false  # Password is too weak
 
     Else:
         Return true  # Password is acceptable
@@ -24,56 +32,65 @@ Define function named is_strong_password that checks if the password is strong:
 
 Define function named create_user where we create the (name, email, password):
 
+    #Step 1: Check if the name is empty
     If the name is empty:
         Show message: "Error: Name cannot be empty."
         Stop and return false
 
+    #Step 2: Check if the email is valid
     If is_valid_email(email) returns false:
         Stop and return false
 
+    #Step 3: Check if the password is strong
     If is_strong_password(password) returns false:
         Stop and return false
 
-    For each user in the user_database:
-        If the user's email is exactly the same as the given email:
+    #Step 4: Make sure the email is not already used
+    For each user in user_database:
+        If the user's email is the same as the given email:
             Show message: "Error: A user with this email already exists."
             Stop and return false
 
-
+    #Step 5: Create a new user with the given information
     Create a new_user with:
         name = given name
         email = given email
         password = given password
 
+    #Step 6: Add the new user to the database
     Add new_user to user_database
 
+    #Step 7: Show a success message
     Show message: "User created successfully: " followed by the user's email
 
+    #Step 8: Return true to show success
     Return true
+
 
 Define function named login_user to log in a user using (email, password):
 
-    Check if the email format is valid using the is_valid_email function
+    #Step 1: Check if the email is valid
     If is_valid_email(email) returns false:
         Stop and return false
 
-    Check if the password is provided
+    #Step 2: Check if the password is provided
     If the password is empty:
         Show message: "Error: Password cannot be empty."
         Stop and return false
 
-    For each user in the user_database:
-        
+    #Step 3: Search for the user in the user_database
+    For each user in user_database:
         If the user's email matches the given email:
-            
-            Step 4: Check if the password matches
+
+            #Step 4: Check if the password matches too
             If the user's password is the same as the given password:
                 Show message: "Login successful. Welcome, " followed by the user's name
-                Return true  # Login was successful
+                Return true  # User logged in successfully
 
             Else:
                 Show message: "Error: Incorrect password."
                 Stop and return false
 
+    #Step 5: If no matching email is found
     Show message: "Error: User not found."
     Return false
