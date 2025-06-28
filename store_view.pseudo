@@ -21,3 +21,54 @@ function display_filtered_products(filters):
     for each product in filtered_products:
         print product.name, product.color, product.brand
 
+# Example filters object
+# filters = {
+#     width: 10,
+#     height: None,
+#     length: 20,
+#     weight: None,
+#     color: "red",
+#     brand: "Generic"
+# }
+
+# Function to filter products based on attributes (width, height, length, weight, color, brand)
+function filter_products(filters):
+    # Create an empty list to store filtered products
+    filtered_products = []
+
+    # Loop through all products in product_list
+    for each product in product_list:
+        # Check if the product matches all filters
+        if matches_filters(product, filters):
+            # If it matches, add it to the filtered_products list
+            filtered_products.append(product)
+    
+    return filtered_products
+
+# Helper function to check if a product matches the filters
+function matches_filters(product, filters):
+    # Check width filter
+    if filters.width is not None and product.width != filters.width:
+        return false
+
+    # Check height filter
+    if filters.height is not None and product.height != filters.height:
+        return false
+
+    # Check length filter
+    if filters.length is not None and product.length != filters.length:
+        return false
+
+    # Check weight filter
+    if filters.weight is not None and product.weight != filters.weight:
+        return false
+
+    # Check color filter
+    if filters.color is not None and product.color != filters.color:
+        return false
+
+    # Check brand filter
+    if filters.brand is not None and product.brand != filters.brand:
+        return false
+
+    return true
