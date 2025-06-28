@@ -1,31 +1,26 @@
-# Handles product data
 
-# Sample structure for a product
-# product = {
-#     name: "Sample Product",
-#     width: 10,
-#     height: 5,
-#     length: 20,
-#     weight: 1.5,
-#     color: "red",
-#     brand: "Generic"
-# }
+product_list = []                                           #In-memory product storage
 
-# Placeholder product list to store all products
-product_list = []
 
-# Function to create a product
-function create_product(name, width, height, length, weight, color, brand):
-    # Create a product dictionary
-    product = {
-        name: name,
-        width: width,
-        height: height,
-        length: length,
-        weight: weight,
-        color: color,
-        brand: brand
+#Feature 3
+#Function to add a product
+function add_product(                                       
+    product = {                                             #creates a new product with valid attributes
+        input name TEXT,
+        input width DECIMAL,
+        input height DECIMAL,
+        input length DECIMAL,
+        input weight DECIMAL,
+        input color TEXT,
+        input brand TEXT,
+        input price DECIMAL
     }
-    
-    # Add product to product_list
-    product_list.append(product)
+
+    if product is in product_list(                          #Checks the added product in the product_list
+        print "Product already exist. Update or add a different product"
+    )else(
+        append product to product_list                      #Adds the product to the in-memory product storage
+        print "Product added successfully"
+    )
+)
+

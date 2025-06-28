@@ -1,7 +1,20 @@
 # Displays product listings
 
-# Placeholder function:
-# function display_products()
+function list_products(
+    if product_list is empty(                                       # Check if the list is empty
+        print "No products available."
+    )else:
+        for product in product_list:                                #Displays the products one by one
+            print "Name: " + product[name]
+            print "Width: " + product[width]
+            print "Height: " + product[height]
+            print "Length: " + product[length]
+            print "Weight: " + product[weight]
+            print "Color: " + product[color]
+            print "Brand: " + product[brand]
+            print "Price: " + product[price]
+            print "----------------------"
+)
 
 # Displays product listings
 
@@ -20,16 +33,6 @@ function display_filtered_products(filters):
     # Display the filtered list of products
     for each product in filtered_products:
         print product.name, product.color, product.brand
-
-# Example filters object
-# filters = {
-#     width: 10,
-#     height: None,
-#     length: 20,
-#     weight: None,
-#     color: "red",
-#     brand: "Generic"
-# }
 
 # Function to filter products based on attributes (width, height, length, weight, color, brand)
 function filter_products(filters):
@@ -72,3 +75,20 @@ function matches_filters(product, filters):
         return false
 
     return true
+
+#Feature 4
+#Display storefront layout
+
+# Placeholder function:
+function display_products()
+    print "===== PSEUDO SHOP STOREFRONT ====="
+    print "Available Products:"
+    list_products
+    print ""
+
+# Display storefront welcome
+function display_storefront_header():
+    print "******************************************************"
+    print "*     WELCOME TO ABS BRAND NEW PSEUDO SHOP   *"
+    print "******************************************************"
+    print ""
