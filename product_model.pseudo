@@ -1,6 +1,6 @@
 # Handles product data
 
-# Sample structure:
+# Sample structure for a product
 # product = {
 #     name: "Sample Product",
 #     width: 10,
@@ -11,6 +11,21 @@
 #     brand: "Generic"
 # }
 
-# Placeholder product list
+# Placeholder product list to store all products
 product_list = []
 
+# Function to create a product
+function create_product(name, width, height, length, weight, color, brand):
+    # Create a product dictionary
+    product = {
+        name: name,
+        width: width,
+        height: height,
+        length: length,
+        weight: weight,
+        color: color,
+        brand: brand
+    }
+    
+    # Add product to product_list
+    product_list.append(product)
