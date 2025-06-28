@@ -1,5 +1,16 @@
 # Displays product listings
 
 # Placeholder function:
-# function display_products()
+function display_products()
+    print "===== PSEUDO SHOP STOREFRONT ====="
+    print "Available Products:"
+    list_products
+    print ""
 
+
+# Display storefront welcome
+function display_storefront_header():
+    print "******************************************************"
+    print "*     WELCOME TO ABS BRAND NEW PSEUDO SHOP   *"
+    print "******************************************************"
+    print ""
