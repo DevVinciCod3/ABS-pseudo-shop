@@ -21,6 +21,39 @@ function list_products(
 #Feature 4
 #Display storefront layout
 
-function display_products(
+# Placeholder function:
+function display_products()
+    print "===== PSEUDO SHOP STOREFRONT ====="
+    print "Available Products:"
+    list_products
+    print ""
+
+# Display storefront welcome
+function display_storefront_header():
+    print "******************************************************"
+    print "*     WELCOME TO ABS BRAND NEW PSEUDO SHOP   *"
+    print "******************************************************"
+    print ""
+
+#Display filtered results
+function display_filtered_products(filters):
+    filtered_products = filter_products(filters)
+    if filtered_products is empty:
+        print "No products match your filters."
+        return
     
-)
+    print "===== FILTERED RESULTS ====="
+    print "Products matching your criteria:"
+    print ""
+    
+    print "Name: " + product[name]
+    print "Price: " + product[price]
+
+    for each product in filtered_products:
+        print "Width: " + product[width]
+        print "Height: " + product[height]
+        print "Length: " + product[length]
+        print "Weight: " + product[weight]
+        print "Color: " + product[color]
+        print "Brand: " + product[brand]
+        print "--------------------"
