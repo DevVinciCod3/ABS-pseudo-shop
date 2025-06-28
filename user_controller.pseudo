@@ -4,3 +4,66 @@
 # function create_user(name, email, password)
 # function login_user(email, password)
 
+# used to store users
+global user_database = []
+
+# Helper function to validate email format (very basic)
+function is_valid_email(email):
+    if '@' not in email or '.' not in email:
+        print "Error: Invalid email format."
+        return false
+    return true
+
+# Helper function to validate password strength (basic)
+function is_strong_password(password):
+    if length(password) < 6:
+        print "Error: Password must be at least 6 characters."
+        return false
+    return true
+
+function create_user(name, email, password):
+    # Validate input fields
+    if name is empty:
+        print "Error: Name cannot be empty."
+        return false
+    if not is_valid_email(email):
+        return false
+    if not is_strong_password(password):
+        return false
+
+    # Check if a user with the same email already exists
+    for each user in user_database:
+        if user.email is equal to email:
+            print "Error: A user with this email already exists."
+            return false 
+    # If the email is unique, create a new user object (or dictionary)
+    new_user = {
+        "name": name,
+        "email": email,
+        "password": password # In a real app, you would hash this!
+    }
+    # Add the new user object to our global database list
+    add new_user to user_database
+    print "User created successfully: " + new_user.email
+    return true # Return success
+
+# Function to login a user
+def login_user(email, password):
+    # Validate input fields
+    if not is_valid_email(email):
+        return false
+    if password is empty:
+        print "Error: Password cannot be empty."
+        return false
+    # Search for user in database
+    for each user in user_database:
+        if user.email is equal to email:
+            if user.password is equal to password:
+                print "Login successful. Welcome, " + user.name
+                return true
+            else:
+                print "Error: Incorrect password."
+                return false
+    print "Error: User not found."
+    return false
+
