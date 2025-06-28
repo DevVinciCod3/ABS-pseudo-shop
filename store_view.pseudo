@@ -7,7 +7,6 @@ function display_products()
     list_products
     print ""
 
-
 # Display storefront welcome
 function display_storefront_header():
     print "******************************************************"
