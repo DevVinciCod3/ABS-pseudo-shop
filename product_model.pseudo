@@ -14,3 +14,21 @@
 # Placeholder product list
 product_list = []
 
+
+#Feature 3
+#Function to add a product
+function add_product(
+    product = {
+        input name TEXT,
+        input width DECIMAL,
+        input height DECIMAL,
+        input length DECIMAL,
+        input weight DECIMAL,
+        input color TEXT,
+        input brand TEXT
+    }
+    
+    append product to product_list
+    print "Product added successfully"
+    )
+
