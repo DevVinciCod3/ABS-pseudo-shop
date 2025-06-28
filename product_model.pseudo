@@ -14,7 +14,8 @@ function add_product(
         input length DECIMAL,
         input weight DECIMAL,
         input color TEXT,
-        input brand TEXT
+        input brand TEXT,
+        input price DECIMAL
     }
 
     if product is in product_list(                          #Checks the added product in the product_list
@@ -23,3 +24,4 @@ function add_product(
         append product to product_list                      #Adds the product to the in-memory product storage
         print "Product added successfully"
     )
+)
